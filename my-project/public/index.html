@@ -1,17 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>my-project</title>
+    <link rel="icon" href="./favicon.ico">
+    <title>ダッシュボード｜4F生物室</title>
+    <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
   </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but my-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+  <body class="p_dashboard">
+    <div class="l_wrap">
+      <div class="l_globalnav">
+        <div class="l_gLogo is_pc">
+          <img class="l_gLogo_img" src="./img/common/d-dev_logo.svg" alt="D-Developpers">
+        </div>
+        <nav class="l_gInner">
+          <ul class="l_gUl">
+            <li class="l_gLi">
+              <a class="l_gLink m_dashboard" href="./">ダッシュボード</a>
+            </li>
+            <li class="l_gLi">
+              <a class="l_gLink m_task" href="./task_management">タスク管理ツール</a>
+            </li>
+            <li class="l_gLi">
+              <a class="l_gLink m_quits" href="./quits_checker">貸し借りチェッカー</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="l_account is_pc">
+          <div class="l_aInner">
+            <p class="l_aInfo">
+              <img class="l_aIcon" src="./img/common/account_thumbnail.png" alt="">
+              <span class="l_aName">アカウント名</span>
+            </p>
+            <a class="l_aLogout" href="">ログアウト</a>
+          </div>
+        </div>
+      </div>
+      <main class="l_main">
+        <section class="p_sec01">
+          <div class="p_s01Inner">
+            <h1 class="p_s01Title">4F生物室</h1>
+            <div class="p_s01Messages">
+              <p class="p_s01Message">こんばんは。4F生物室へようこそ。<br>ここでは、D-Developpersが開発・運用を行う<br>Webサービスの一覧を掲載しています。</p>
+            </div>
+          </div>
+        </section>
+        <section class="p_sec02">
+          <div class="p_s02Block">
+            <h2 class="p_s02Head">Notification</h2>
+            <ul class="p_s02Ul">
+              <li class="p_s02Li">
+                <p class="p_s02Label">期日が超過しているタスクが5件あります。</p>
+              </li>
+              <li class="p_s02Li">
+                <p class="p_s02Label">『<a href="./task_management">タスク管理ツール</a>』をアップデートしました。</p>
+              </li>
+              <li class="p_s02Li">
+                <p class="p_s02Label">『<a href="./task_management">タスク管理ツール</a>』サービスをリリースしました！</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="p_sec03">
+          <ul class="p_s03Ul">
+            <li class="p_s03Li">
+              <a class="p_03Card" href="">
+                <div class="p_03CInner">
+                  <div class="p_03Textarea">
+                    <h2 class="p_03CName m_task">タスク管理ツール</h2>
+                    <div class="p03Textarea_inner">
+                      <img class="p_03Img is_sp" src="./img/dashboard/sp_task_thumbnail01.png" alt="">
+                      <p class="p_03CText">自分が抱えている現状の課題を整理し、それぞれの優先度や作業の進捗を可視化するためのツールです。</p>
+                      <small class="p_03CReleased">
+                        <span class="p_03CReleased_label">Last updated:</span> 2019.06.20
+                      </small>
+                    </div>
+                  </div>
+                  <div class="p_03Imgarea is_pc">
+                    <img class="p_03Img" src="./img/dashboard/pc_task_thumbnail01.png" alt="">
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="p_s03Li">
+                <a class="p_03Card" href="">
+                  <div class="p_03CInner">
+                    <div class="p_03Textarea">
+                      <h2 class="p_03CName m_quits">貸し借りチェッカー</h2>
+                      <div class="p03Textarea_inner">
+                        <img class="p_03Img is_sp" src="./img/dashboard/sp_task_thumbnail01.png" alt="">
+                        <p class="p_03CText">自分が貸しているものや、他人から借りているものをひと目で確認することができるツールです。</p>
+                        <small class="p_03CReleased">
+                          <span class="p_03CReleased_label">Last updated:</span> 2019.06.20
+                        </small>
+                      </div>
+                    </div>
+                    <div class="p_03Imgarea is_pc">
+                      <img class="p_03Img" src="./img/dashboard/pc_task_thumbnail01.png" alt="">
+                    </div>
+                  </div>
+                </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="l_footer">
+        <div class="l_account is_sp">
+          <div class="l_aInner">
+            <p class="l_aInfo">
+              <img class="l_aIcon" src="" alt="">
+              <span class="l_aName">アカウント名</span>
+            </p>
+            <a class="l_aLogout" href="">ログアウト</a>
+          </div>
+        </div>
+        <div class="l_fInner">
+          <div class="l_fLogo is_sp">
+            <img src="./img/common/d-dev_logo.svg" alt="D-Developpers">
+          </div>
+          <small class="l_fCredit">Supported by Djungarian Delopers</small>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
