@@ -11,15 +11,15 @@ body {
   display: none;
 }
 .l_wrap {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: 1fr 52px;
 }
 .l_globalnav {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  position: relative;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 240px;
+  height: 100vmax;
+  border-right: 2px solid #FAFAFA;
   background-color: rgba(33, 33, 33, 0.8);
 }
 .l_globalnav .l_gLogo {
@@ -44,10 +44,22 @@ body {
   border-top: 1px solid #FAFAFA;
 }
 .l_globalnav .l_gLink {
-  display: block;
+  display: flex;
+  align-items: center;
   min-height: 88px;
+  padding-left: 28px;
+  font-size: 2rem;
   color: #FAFAFA;
-  background-color: rgba(250, 250, 250, 0.1);
+  background: rgba(250, 250, 250, 0.1) 0 center no-repeat;
+}
+.l_globalnav .l_gLink.m_dashboard {
+  background-image: url('./../img/common/icon_dashboard.svg');
+}
+.l_globalnav .l_gLink.m_task {
+  background-image: url('./../img/common/icon_task.svg');
+}
+.l_globalnav .l_gLink.m_rental {
+  background-image: url('./../img/common/icon_rental.svg');
 }
 .l_account {
   position: absolute;
@@ -58,12 +70,57 @@ body {
   min-height: 88px;
   background-color: rgba(136, 184, 207, 0.2);
 }
+.l_account .l_aIcon {
+  max-width: 88px;
+  max-height: 88px;
+  border-radius: 50%;
+}
+.l_account .l_aName {
+  font-weight: bold;
+}
+.l_account .l_aLogout {
+  font-size: 1.2rem;
+}
 .l_main {
-  grid-column: 2;
-  grid-row: 1;
-  width: calc(100% - 240px);
 }
 .l_footer {
-  grid-column: 2;
-  grid-row: 2;
+}
+.l_footer .l_fCredit {
+  font-size: 1.2rem;
+}
+
+/* ダッシュボード */
+.p_dashboard .p_sec01 {
+  position: relative;
+  height: 100vh;
+  background: url('./../img/dashboard/pc_mainvisual_bg.png') center 0 / cover no-repeat;
+}
+.p_dashboard .p_sec01 .p_s01Inner {
+  padding: calc(224px - 8vh) 0 0 240px;
+}
+.p_dashboard .p_sec01 .p_s01Title {
+  width: 62.5vw;
+  height: 16vw;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url('./../img/dashboard/pc_mainvisual_text.png') 0 0 / 100% auto no-repeat;
+}
+.p_dashboard .p_sec01 .p_s01Messages {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #212121;
+  padding-left: 240px;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+.p_dashboard .p_sec01 .p_s01Message {
+  padding: 40px 64px;
+  font-size: 2.8rem;
+  line-height: 2;
+  letter-spacing: 2px;
+  text-shadow: 0 0 3px #FAFAFA;
+  color: #FAFAFA;
 }
