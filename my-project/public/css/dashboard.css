@@ -39,8 +39,6 @@ a:hover {
   width: 160px;
   height: 160px;
 }
-.l_globalnav .l_gInner {
-}
 .l_globalnav .l_gUl {
   padding: 0;
   margin: 0;
@@ -125,14 +123,24 @@ a:hover {
 .l_main {
 }
 .l_footer {
+  position: relative;
+  left: 240px;
+  width: calc(100% - 240px);
+  padding: 12px 0;
+  border-top: 1px solid #FAFAFA;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+.l_footer .l_fInner {
+  text-align: center;
 }
 .l_footer .l_fCredit {
   font-size: 1.2rem;
+  color: #FAFAFA;
 }
 
 /* ダッシュボード */
 .p_dashboard .p_wrap {
-  background: #212121 url('./../img/dashboard/pc_dashboard_bg.png') center bottom / cover no-repeat;
+  background: #000 url('./../img/dashboard/pc_dashboard_bg.png') center bottom / 100% auto no-repeat;
 }
 .p_dashboard .p_sec01 {
   position: relative;
@@ -162,11 +170,21 @@ a:hover {
 }
 .p_dashboard .p_sec01 .p_s01Message {
   padding: 40px 64px;
+  margin: 0;
   font-size: 2.8rem;
   line-height: 2;
   letter-spacing: 2px;
   text-shadow: 0 0 2px #FAFAFA;
   color: #FAFAFA;
+}
+/* ノートPC用（仮） */
+@media screen and (min-width: 980px) and (max-width: 1320px) {
+  .p_dashboard .p_sec01 .p_s01Inner {
+    padding-top: calc(224px - 24vh);
+  }
+  .p_dashboard .p_sec01 .p_s01Message {
+    padding: 24px 64px;
+  }
 }
 .p_dashboard .p_sec02 {
   padding: 160px 0 48px 240px;
@@ -227,10 +245,14 @@ a:hover {
   box-shadow: 2px 2px 6px 0 rgba(33, 33, 33, 0.75);
   color: #FAFAFA;
 }
-.p_dashboard .p_sec03 .p_s03Card_Inner {
+.p_dashboard .p_sec03 .p_s03Card_inner {
   display: flex;
 }
+.p_dashboard .p_sec03 .p_s03Li:nth-child(2n) .p_s03Card_inner {
+  flex-direction: row-reverse;
+}
 .p_dashboard .p_sec03 .p_s03Textarea {
+  width: 100%;
   padding: 32px 40px 12px;
 }
 .p_dashboard .p_sec03 .p_s03Card_name {
