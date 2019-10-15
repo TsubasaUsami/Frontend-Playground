@@ -37,3 +37,9 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 設計の流れ
+### App.js（全ページで読まれるもの）
+### → router.ts（それぞれのページを読み込む）
+### → /views（router.tsで読まれるやつ。それぞれのページに該当。必要なcomponentsを呼び出す）
+### → /components（汎用的に利用されるパーツ）
