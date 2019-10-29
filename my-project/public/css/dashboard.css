@@ -1,0 +1,282 @@
+html {
+  font-size: 62.5%;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #212121;
+}
+a {
+  color: #FAFAFA;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.is_sp {
+  display: none;
+}
+.l_wrap {
+  position: relative;
+  height: 100%;
+}
+.l_globalnav {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100%;
+  border-right: 2px solid #FAFAFA;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+.l_globalnav .l_gLogo {
+  padding: 48px 0;
+  text-align: center;
+}
+.l_globalnav .l_gLogo_img {
+  width: 160px;
+  height: 160px;
+}
+.l_globalnav .l_gUl {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.l_globalnav .l_gLi {
+  border-bottom: 1px solid #FAFAFA;
+}
+.l_globalnav .l_gLi:first-child {
+  border-top: 1px solid #FAFAFA;
+}
+.l_globalnav .l_gLink {
+  display: flex;
+  align-items: center;
+  min-height: 88px;
+  padding: 0 12px 0 40px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  color: #FAFAFA;
+  background: rgba(250, 250, 250, 0.1) 8px center / 28px 28px no-repeat;
+  transition: text-shadow .4s;
+}
+.l_globalnav .l_gLink.m_dashboard {
+  background-image: url('./../img/common/icon_dashboard.svg');
+}
+.l_globalnav .l_gLink.m_task {
+  background-image: url('./../img/common/icon_task.svg');
+}
+.l_globalnav .l_gLink.m_rental {
+  background-image: url('./../img/common/icon_rental.svg');
+}
+.l_globalnav .l_gLink.is_current {
+  background-color: rgba(37, 122, 251, 0.4);
+}
+.l_globalnav .l_gLink.m_dashboard.is_current {
+  background-image: url('./../img/common/icon_dashboard_current.svg');
+}
+.l_globalnav .l_gLink.m_task.is_current {
+  background-image: url('./../img/common/icon_task_current.svg');
+}
+.l_globalnav .l_gLink.m_rental.is_current {
+  background-image: url('./../img/common/icon_rental_current.svg');
+}
+.l_globalnav .l_gLink:hover {
+  text-shadow: 0 0 2px #FAFAFA;
+}
+.l_account {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #FAFAFA;
+  min-height: 88px;
+  background-color: rgba(136, 184, 207, 0.2);
+}
+.l_account .l_aInner {
+  padding: 12px;
+}
+.l_account .l_aInfo {
+  display: flex;
+  align-items: center;
+}
+.l_account .l_aIcon {
+  max-width: 88px;
+  max-height: 88px;
+  margin-right: 8px;
+  border: 1px solid #257AFB;
+  border-radius: 50%;
+}
+.l_account .l_aName {
+  font-weight: 700;
+  color: #FAFAFA;
+}
+.l_account .l_aLogout {
+  display: block;
+  padding-right: 20px;
+  text-align: right;
+  font-size: 1.2rem;
+  color: #FAFAFA;
+  background: url('./../img/common/icon_logout.svg') 100% center / 14px 14px no-repeat;
+}
+.l_footer {
+  position: relative;
+  left: 240px;
+  width: calc(100% - 240px);
+  padding: 12px 0;
+  border-top: 1px solid #FAFAFA;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+.l_footer .l_fInner {
+  text-align: center;
+}
+.l_footer .l_fCredit {
+  font-size: 1.2rem;
+  color: #FAFAFA;
+}
+
+/* ダッシュボード */
+.p_dashboard .p_wrap {
+  background: #000 url('./../img/dashboard/pc_dashboard_bg.png') center bottom / 100% auto no-repeat;
+}
+.p_dashboard .p_sec01 {
+  position: relative;
+  height: 100vh;
+  background: url('./../img/dashboard/pc_mainvisual_bg.png') center 0 / cover no-repeat;
+}
+.p_dashboard .p_sec01 .p_s01Inner {
+  padding: calc(224px - 8vh) 0 0 240px;
+}
+.p_dashboard .p_sec01 .p_s01Title {
+  width: 62.5vw;
+  height: 16vw;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url('./../img/dashboard/pc_mainvisual_text.png') 0 0 / 100% auto no-repeat;
+}
+.p_dashboard .p_sec01 .p_s01Messages {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #212121;
+  padding-left: 240px;
+  background-color: rgba(33, 33, 33, 0.8);
+}
+.p_dashboard .p_sec01 .p_s01Message {
+  padding: 40px 64px;
+  margin: 0;
+  font-size: 2.8rem;
+  line-height: 2;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2px #FAFAFA;
+  color: #FAFAFA;
+}
+/* ノートPC用（仮） */
+@media screen and (min-width: 980px) and (max-width: 1320px) {
+  .p_dashboard .p_sec01 .p_s01Inner {
+    padding-top: calc(224px - 24vh);
+  }
+  .p_dashboard .p_sec01 .p_s01Message {
+    padding: 24px 64px;
+  }
+}
+.p_dashboard .p_sec02 {
+  padding: 160px 0 48px 240px;
+  min-height: 452px;
+  background: url('./../img/dashboard/pc_notification_bg.png') center 12px / 100% auto no-repeat;
+}
+.p_dashboard .p_sec02 .p_s02Block {
+  padding: 24px 40px;
+  margin: 0 64px;
+  background-color: #363F44;
+  box-shadow: 2px 2px 6px 0 rgba(33, 33, 33, 0.75);
+}
+.p_dashboard .p_sec02 .p_s02Head {
+  padding: 0 12px 0 44px;
+  border-bottom: 2px solid #FAFAFA;
+  margin-bottom: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", sans-serif;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #FAFAFA;
+  background: url('./../img/dashboard/icon_notification.svg') 0 center / auto 36px no-repeat;
+}
+.p_dashboard .p_sec02 .p_s02Ul {
+  padding: 0 0 0 24px;
+  margin: 0;
+  color: #FAFAFA;
+}
+.p_dashboard .p_sec02 .p_s02Li {
+  padding-bottom: 16px;
+  line-height: 2;
+}
+.p_dashboard .p_sec02 .p_s02Label {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+.p_dashboard .p_sec02 .p_s02Label.is_important {
+  font-weight: 700;
+}
+.p_dashboard .p_sec02 .p_s02Link {
+  text-decoration: underline;
+}
+.p_dashboard .p_sec02 .p_s02Link:hover {
+  text-decoration: none;
+}
+.p_dashboard .p_sec03 {
+  padding: 40px 0 156px 240px;
+}
+.p_dashboard .p_sec03 .p_s03Ul {
+  padding: 0;
+  margin: 0 64px;
+  list-style: none;
+}
+.p_dashboard .p_sec03 .p_s03Card {
+  display: block;
+  background-color: #153245;
+  margin-bottom: 48px;
+  box-shadow: 2px 2px 6px 0 rgba(33, 33, 33, 0.75);
+  color: #FAFAFA;
+}
+.p_dashboard .p_sec03 .p_s03Card_inner {
+  display: flex;
+}
+.p_dashboard .p_sec03 .p_s03Li:nth-child(2n) .p_s03Card_inner {
+  flex-direction: row-reverse;
+}
+.p_dashboard .p_sec03 .p_s03Textarea {
+  width: 100%;
+  padding: 32px 40px 12px;
+}
+.p_dashboard .p_sec03 .p_s03Card_name {
+  padding: 0 0 8px 48px;
+  border-bottom: 2px solid #FAFAFA;
+  margin-bottom: 16px;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.p_dashboard .p_sec03 .p_s03Card_name.m_task {
+  background: url('./../img/common/icon_task.svg') 0 calc(50% - 6px) / 36px 36px no-repeat;
+}
+.p_dashboard .p_sec03 .p_s03Card_name.m_rental {
+  background: url('./../img/common/icon_rental.svg') 0 calc(50% - 6px) / 36px 36px no-repeat;
+}
+.p_dashboard .p_sec03 .p_s03Card_text {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.p_dashboard .p_sec03 .p_s03Card_released {
+  display: block;
+  text-align: right;
+  font-size: 1.2rem;
+}
+.p_dashboard .p_sec03 .p_s03Card_released .p_s03Card_rLabel {
+  font-weight: 700;
+}
